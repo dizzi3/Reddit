@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RedditAPI</string>
+    
+    <string-array name="viewing_options">
+        <item>Hot</item>
+        <item>New</item>
+        <item>Top</item>
+        <item>Controversial</item>
+        <item>Rising</item>
+    </string-array>
+    
+</resources>
