@@ -10,7 +10,6 @@ import android.text.style.ClickableSpan
 import android.text.style.URLSpan
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
 
 class HtmlToTextConverter{
     companion object {
@@ -24,7 +23,7 @@ class HtmlToTextConverter{
             for (span in urls)
                 makeLinkClickable(strBuilder, span, context)
 
-            textView.text = strBuilder
+            textView.text = noTrailingWhiteLines(strBuilder)
             textView.movementMethod = LinkMovementMethod.getInstance()
         }
 
@@ -61,6 +60,18 @@ class HtmlToTextConverter{
                 Html.fromHtml(html, Html.FROM_HTML_MODE_COMPACT)
             else
                 Html.fromHtml(html)
+        }
+
+
+        //https://stackoverflow.com/questions/16585557/extra-padding-on-textview-with-html-contents
+        fun noTrailingWhiteLines(text: CharSequence): CharSequence {
+            var trimmedText : CharSequence = text
+
+            while (trimmedText[trimmedText.length - 1] == '\n') {
+                trimmedText = trimmedText.subSequence(0, text.length - 1)
+            }
+
+            return trimmedText
         }
 
     }

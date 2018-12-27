@@ -25,36 +25,32 @@ class ExpandableCommentGroup constructor(comment : Comment, depth: Int = 0)
 
         private lateinit var expandableGroup : ExpandableGroup
 
-        override fun bind(viewHolder: ViewHolder, position: Int) {
-            addingDepthViews(viewHolder)
-
+        private fun setUpViews(viewHolder : ViewHolder){
             viewHolder.itemView.authorTV.text = comment.author
             viewHolder.itemView.dateTV.text = comment.date
-            viewHolder.itemView.commentBodyTV.text = comment.body
-            viewHolder.itemView.commentBodyTV.movementMethod = LinkMovementMethod.getInstance()
+            viewHolder.itemView.commentBodyTV.text = HtmlToTextConverter.noTrailingWhiteLines(comment.body)
             viewHolder.itemView.upvotesTV.text = comment.upvotes
+        }
 
-            /*
+        private fun setOnClickExpand(viewHolder : ViewHolder){
             viewHolder.itemView.apply{
                 setOnClickListener {
                     expandableGroup.onToggleExpanded()
                 }
-            }*/
-            viewHolder.itemView.authorTV.apply {
+            }
+
+            viewHolder.itemView.commentBodyTV.apply{
                 setOnClickListener {
                     expandableGroup.onToggleExpanded()
+                    movementMethod = LinkMovementMethod.getInstance()
                 }
             }
-            viewHolder.itemView.dateTV.apply {
-                setOnClickListener {
-                    expandableGroup.onToggleExpanded()
-                }
-            }
-            viewHolder.itemView.upvotesTV.apply {
-                setOnClickListener {
-                    expandableGroup.onToggleExpanded()
-                }
-            }
+        }
+
+        override fun bind(viewHolder: ViewHolder, position: Int) {
+            addingDepthViews(viewHolder)
+            setUpViews(viewHolder)
+            setOnClickExpand(viewHolder)
         }
 
         private fun addingDepthViews(viewHolder : ViewHolder){

@@ -59,7 +59,7 @@ class LoadCommentsTask(private val fragment : CommentSectionFragment, private va
                 val author = commentJSON.getString("author")
                 val body = HtmlToTextConverter.getSpannableStringBuilder(
                         commentJSON.getString("body_html"), context)
-                val score = commentJSON.getString("score")
+                val score = "Score: " + commentJSON.getString("score")
                 val date = getFormattedDate(commentJSON.getLong("created_utc"))
 
                 val currentComment = Comment(author, score, date, body, ArrayList())
@@ -87,7 +87,7 @@ class LoadCommentsTask(private val fragment : CommentSectionFragment, private va
                     //TODO: MAKE IT BODY HTML AND CONVERT
                     val body = HtmlToTextConverter.getSpannableStringBuilder(
                             commentJSON.getString("body_html"), context)
-                    val score = commentJSON.getString("score")
+                    val score = "Score: " + commentJSON.getString("score")
                     val date = getFormattedDate(commentJSON.getLong("created_utc"))
 
                     val currentComment = Comment(author, score, date, body, ArrayList())
