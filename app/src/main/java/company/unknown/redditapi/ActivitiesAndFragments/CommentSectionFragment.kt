@@ -1,11 +1,10 @@
 package company.unknown.redditapi.ActivitiesAndFragments
 
+import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.xwray.groupie.GroupAdapter
@@ -30,6 +29,7 @@ class CommentSectionFragment : Fragment(){
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         LoadCommentsTask(this, context!!).execute(threadPermalink)
     }
 
@@ -38,7 +38,7 @@ class CommentSectionFragment : Fragment(){
         val groupAdapter = GroupAdapter<ViewHolder>()
         if(view != null) {
             view!!.recyclerView.apply {
-                layoutManager = LinearLayoutManager(context)
+                layoutManager = DisabledScrollingLinearLM(context)
                 adapter = groupAdapter
             }
 
@@ -47,6 +47,12 @@ class CommentSectionFragment : Fragment(){
                     groupAdapter.add(this)
                 }
             }
+        }
+    }
+
+    private class DisabledScrollingLinearLM(context : Context) : LinearLayoutManager(context){
+        override fun canScrollVertically(): Boolean {
+            return false
         }
     }
 }

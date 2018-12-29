@@ -57,7 +57,7 @@ class SelfThreadFragment : Fragment(){
         bundle.putString("permalink", redditThread.permalink)
         fragment.arguments = bundle
 
-        fragmentTransaction.add(R.id.commentSectionFrame, fragment)
+        fragmentTransaction.replace(R.id.commentSectionFrame, fragment)
         fragmentTransaction.commit()
     }
 

@@ -55,16 +55,7 @@ class LoadCommentsTask(private val fragment : CommentSectionFragment, private va
 
             for(index in 0 until commentsArrayJSON.length()){
                 val commentJSON = commentsArrayJSON.getJSONObject(index).getJSONObject("data")
-
-                val author = commentJSON.getString("author")
-                val body = HtmlToTextConverter.getSpannableStringBuilder(
-                        commentJSON.getString("body_html"), context)
-                val score = "Score: " + commentJSON.getString("score")
-                val date = getFormattedDate(commentJSON.getLong("created_utc"))
-
-                val currentComment = Comment(author, score, date, body, ArrayList())
-
-                comments.add(getSingleCommentFromJSONObject(commentJSON, currentComment))
+                comments.add(getSingleCommentFromJSONObject(commentJSON, generateCommentFromJSONData(commentJSON)))
             }
 
             return comments
@@ -81,56 +72,23 @@ class LoadCommentsTask(private val fragment : CommentSectionFragment, private va
                         .getJSONArray("children")
                 for (index in 0 until childrenArray.length()) {
                     val commentJSON = childrenArray.getJSONObject(index).getJSONObject("data")
-
-                    val author = commentJSON.getString("author")
-                    Log.i("INFO", author)
-                    //TODO: MAKE IT BODY HTML AND CONVERT
-                    val body = HtmlToTextConverter.getSpannableStringBuilder(
-                            commentJSON.getString("body_html"), context)
-                    val score = "Score: " + commentJSON.getString("score")
-                    val date = getFormattedDate(commentJSON.getLong("created_utc"))
-
-                    val currentComment = Comment(author, score, date, body, ArrayList())
-
-                    /*
-                    comment.childs.add(currentComment)
-                    getSingleCommentFromJSONObject(commentJSON, currentComment)
-                    */
-                    comment.childs.add(getSingleCommentFromJSONObject(commentJSON, currentComment))
+                    comment.childs.add(getSingleCommentFromJSONObject(commentJSON, generateCommentFromJSONData(commentJSON)))
                 }
                 return comment
             }
             return comment
         }catch (e : Exception){return comment}
+    }
 
-        /*
-        if(jsonObj.getJSONObject("replies").getJSONObject("data") != null){
-            val childrenArray = jsonObj.getJSONObject("replies").getJSONObject("data")
-                    .getJSONArray("children")
-            for(index in 0 until childrenArray.length()){
-                val commentJSON = childrenArray.getJSONObject(index).getJSONObject("data")
+    private fun generateCommentFromJSONData(data : JSONObject) : Comment{
+        val author = data.getString("author")
 
-                val author = commentJSON.getString("author")
-                Log.i("INFO", author)
-                //TODO: MAKE IT BODY HTML AND CONVERT
-                val body = commentJSON.getString("body")
-                val score = commentJSON.getString("score")
-                val date = getFormattedDate(commentJSON.getLong("created_utc"))
+        val body = HtmlToTextConverter.getSpannableStringBuilder(
+                data.getString("body_html"), context)
+        val score = "Score: " + data.getString("score")
+        val date = getFormattedDate(data.getLong("created_utc"))
 
-                val currentComment = Comment(author, score, date, body, ArrayList())
-
-                /*
-                comment.childs.add(currentComment)
-                getSingleCommentFromJSONObject(commentJSON, currentComment)
-                */
-                comment.childs.add(getSingleCommentFromJSONObject(commentJSON, currentComment))
-            }
-            return comment
-        }else {
-            Log.i("INFO", "OUT OF")
-            return comment
-        }
-        */
+        return Comment(author, score, date, body, ArrayList())
     }
 
     override fun onPostExecute(result: ArrayList<Comment>?) {
@@ -138,7 +96,5 @@ class LoadCommentsTask(private val fragment : CommentSectionFragment, private va
 
         if(result != null)
             fragment.setComments(result)
-        else
-            Log.i("INFO", "NO COMMENTS")
     }
 }

@@ -1,6 +1,7 @@
 package company.unknown.redditapi.OtherFiles
 
 import android.content.Context
+import android.os.AsyncTask
 import android.os.Build
 import android.text.Html
 import android.text.SpannableStringBuilder
@@ -15,14 +16,7 @@ class HtmlToTextConverter{
     companion object {
 
         fun setTextView(textView: TextView, html: String, context : Context) {
-            //Reason I'm using fromHtml(fromHtml().toString))
-            //https://stackoverflow.com/questions/2918920/decode-html-entities-in-android
-            val sequence = fromHtml(fromHtml(html).toString())
-            val strBuilder = SpannableStringBuilder(sequence)
-            val urls = strBuilder.getSpans(0, sequence.length, URLSpan::class.java)
-            for (span in urls)
-                makeLinkClickable(strBuilder, span, context)
-
+            val strBuilder = getSpannableStringBuilder(html, context)
             textView.text = noTrailingWhiteLines(strBuilder)
             textView.movementMethod = LinkMovementMethod.getInstance()
         }
@@ -59,16 +53,16 @@ class HtmlToTextConverter{
             return if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                 Html.fromHtml(html, Html.FROM_HTML_MODE_COMPACT)
             else
-                Html.fromHtml(html)
+               return Html.fromHtml(html)
         }
 
 
         //https://stackoverflow.com/questions/16585557/extra-padding-on-textview-with-html-contents
         fun noTrailingWhiteLines(text: CharSequence): CharSequence {
-            var trimmedText : CharSequence = text
+            var trimmedText = text
 
             while (trimmedText[trimmedText.length - 1] == '\n') {
-                trimmedText = trimmedText.subSequence(0, text.length - 1)
+                trimmedText = trimmedText.subSequence(0, trimmedText.length - 1)
             }
 
             return trimmedText
