@@ -36,8 +36,8 @@ class RThreadArrayAdapter(private val context : AppCompatActivity, private val r
         view.subreddit_name.text = redditThread.Subreddit
         view.titleTV.text = redditThread.title
         view.timeTV.text = getFormattedDate(redditThread)
-        view.scoreTV.text = "score: " + redditThread.score.toString()
-        view.commentsTV.text = "comments: " + redditThread.numberOfComments.toString()
+        view.scoreTV.text = redditThread.score.toString()
+        view.commentsTV.text = redditThread.numberOfComments.toString()
 
 
         if(redditThread.author.length > 15){

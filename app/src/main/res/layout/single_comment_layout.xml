@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="7dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:text="DifficultJellyfish"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/separatorContainer"
@@ -43,7 +43,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="7dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
         android:textColor="@color/black"
@@ -56,12 +56,25 @@
         android:id="@+id/upvotesTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="TextView"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="23"
+        android:textColor="@color/black"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/commentBodyTV"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="7dp"
         app:layout_constraintStart_toEndOf="@+id/separatorContainer"
-        app:layout_constraintTop_toBottomOf="@+id/commentBodyTV" />
+        app:layout_constraintTop_toBottomOf="@+id/commentBodyTV"
+        app:srcCompat="@drawable/upvotes_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

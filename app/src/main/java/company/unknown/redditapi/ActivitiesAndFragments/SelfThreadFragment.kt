@@ -37,28 +37,19 @@ class SelfThreadFragment : Fragment(){
     }
 
     private fun initializeWidgets(view : View){
-        view.subreddit_name.text = redditThread.Subreddit
-        view.titleTV.text = redditThread.title
-        view.timeTV.text = getFormattedDate(redditThread)
-        view.scoreTV.text = "score: " + redditThread.score.toString()
-        view.commentsTV.text = "comments: " + redditThread.numberOfComments.toString()
-
-        setSelfText(view, redditThread)
+        initializeTextViews(view)
         switchWidgetsBasedOnLength(view, redditThread)
-
         initializeCommentSection()
     }
 
-    private fun initializeCommentSection(){
-        val fragmentTransaction = childFragmentManager.beginTransaction()
+    private fun initializeTextViews(view : View){
+        view.subreddit_name.text = redditThread.Subreddit
+        view.titleTV.text = redditThread.title
+        view.timeTV.text = getFormattedDate(redditThread)
+        view.scoreTV.text = redditThread.score.toString()
+        view.commentsTV.text = redditThread.numberOfComments.toString()
 
-        val fragment = CommentSectionFragment()
-        val bundle = Bundle()
-        bundle.putString("permalink", redditThread.permalink)
-        fragment.arguments = bundle
-
-        fragmentTransaction.replace(R.id.commentSectionFrame, fragment)
-        fragmentTransaction.commit()
+        setSelfText(view, redditThread)
     }
 
     private fun setSelfText(view : View, redditThread: RedditThread){
@@ -72,5 +63,17 @@ class SelfThreadFragment : Fragment(){
             view.postedByExtended.visibility = View.VISIBLE
         }else
             view.postedBy.text = "posted by u/" + redditThread.author
+    }
+
+    private fun initializeCommentSection(){
+        val fragmentTransaction = childFragmentManager.beginTransaction()
+
+        val fragment = CommentSectionFragment()
+        val bundle = Bundle()
+        bundle.putString("permalink", redditThread.permalink)
+        fragment.arguments = bundle
+
+        fragmentTransaction.replace(R.id.commentSectionFrame, fragment)
+        fragmentTransaction.commit()
     }
 }

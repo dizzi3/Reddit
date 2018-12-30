@@ -80,34 +80,4 @@ class MainActivity : AppCompatActivity(), OnThreadSelectedListener, OnLinkClicke
         fragmentTransaction.replace(R.id.container, fragment)
         fragmentTransaction.commit()
     }
-
-    /*
-                when thread is a link
-                post_hint -> link
-                url -> "www.xd.com/XD"
-                thumbnail -> miniaturka
-                title ->
-                domain -> twitter.com, idk, might be useful
-
-
-
-                is_self -> text-only post
-
-                https://www.youtube.com/watch?v=TUXui5ItBkM -> when user click on the link
-                to make it open in our app, not in an external browser like chrome
-
-
-                USE FRAGMENTS INSTEAD OF ACTIVITY, MAYBE HAVE A METHOD IN ACTIVITY TO DETERMINE
-                WHEATHER IT SHOULD USE ONLY-TEXT FRAGMENT, IMAGE FRAGMENT OR JUST LINK FRAGMENT
-                FOR LINK-ONLY THREADS. EACH OF THESE FRAGMENTS SHOULD HAVE THEIR OWN LAYOUT I GUESS
-
-
-                CREATING A SEPARATE FRAGMENT FOR THE COMMENTS SECTION MIGHT BE A GOOD IDEA
-
-                SAME FOR THE WEB VIEW WHEN THE USER CLICKS ON THE LINK EITHER IN THE SELF-TEXT
-                SECTION OR IN THE COMMENTS IT SHOULD PERFORM A FRAGMENT TRANSACTION AND ALSO
-                ADD THE PREVIOUS FRAGMENTS LAYOUT INTO BACK STACK SO THE USER CAN EASILY NAVIGATE
-                BACKWARDS
-
-             */
 }

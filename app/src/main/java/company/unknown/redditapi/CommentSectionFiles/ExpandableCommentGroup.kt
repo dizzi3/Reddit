@@ -1,6 +1,7 @@
 package company.unknown.redditapi.CommentSectionFiles
 
 import android.text.method.LinkMovementMethod
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import com.xwray.groupie.ExpandableGroup

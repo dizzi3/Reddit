@@ -85,7 +85,7 @@ class LoadCommentsTask(private val fragment : CommentSectionFragment, private va
 
         val body = HtmlToTextConverter.getSpannableStringBuilder(
                 data.getString("body_html"), context)
-        val score = "Score: " + data.getString("score")
+        val score = data.getString("score")
         val date = getFormattedDate(data.getLong("created_utc"))
 
         return Comment(author, score, date, body, ArrayList())
