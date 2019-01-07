@@ -1,9 +1,13 @@
 package company.unknown.redditapi.Tasks
 
 import android.os.AsyncTask
+import android.util.Log
 import company.unknown.redditapi.ActivitiesAndFragments.SearchActivity
 import company.unknown.redditapi.CommentSectionFiles.Comment
+import company.unknown.redditapi.DataClasses.ImageOrGifThread
 import company.unknown.redditapi.DataClasses.RedditThread
+import company.unknown.redditapi.DataClasses.SelfThread
+import company.unknown.redditapi.DataClasses.ThreadType
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -66,20 +70,42 @@ class SearchRedditTask(private val context : SearchActivity)
     fun getResultFromJSONObject(data : JSONObject) : RedditThread {
         val title = data.getString("title")
         val subreddit = data.getString("subreddit_name_prefixed")
-        val url = data.getString("url")
         val score = data.getInt("score")
         val createdUtc = data.getInt("created_utc")
         val author = data.getString("author")
         val numberOfComments = data.getInt("num_comments")
         val isSelf = data.getBoolean("is_self")
-        val selfTextHtml = data.getString("selftext_html")
         var permalink = "https://www.reddit.com" + data.getString("permalink")
         //Removing the '/' at last position from permalink
         permalink = permalink.substring(0, permalink.length-1)
         permalink += ".json"
 
+
+        try{
+            val hint = data.getString("post_hint")
+
+            if(hint == "hosted:video") {
+                val url = data.getJSONObject("secure_media").getJSONObject("reddit_video")
+                        .getString("fallback_url")
+                return ImageOrGifThread(subreddit, title, url, author, score, createdUtc,
+                        numberOfComments, permalink, ThreadType.GIF)
+            }else if(hint == "image"){
+                val url = data.getString("url")
+                return ImageOrGifThread(subreddit, title, url, author, score, createdUtc,
+                        numberOfComments, permalink, ThreadType.IMAGE)
+            }
+        }catch (e : Exception){}
+
+        val url = data.getString("url")
+
+        if(isSelf){
+            val selfTextHtml = data.getString("selftext_html")
+            return SelfThread(subreddit, title, url, author, score, createdUtc,
+                    numberOfComments, permalink, selfTextHtml)
+        }
+
         return RedditThread(subreddit, title, url, author, score, createdUtc,
-                numberOfComments, isSelf, selfTextHtml, permalink)
+                numberOfComments, permalink)
     }
 
     override fun onPostExecute(redditThreads: ArrayList<RedditThread>?) {

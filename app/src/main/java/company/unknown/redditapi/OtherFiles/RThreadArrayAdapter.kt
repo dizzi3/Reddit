@@ -1,12 +1,17 @@
 package company.unknown.redditapi.OtherFiles
 
 import android.content.Context
+import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
+import company.unknown.redditapi.DataClasses.ImageOrGifThread
 import company.unknown.redditapi.DataClasses.RedditThread
+import company.unknown.redditapi.DataClasses.ThreadType
 import company.unknown.redditapi.R
 import company.unknown.redditapi.Tasks.LoadImageTask
 import kotlinx.android.synthetic.main.thread_list_item.view.*
@@ -25,15 +30,38 @@ class RThreadArrayAdapter(private val context : AppCompatActivity, private val r
 
         setValuesForWidgets(view, result)
 
-        if(result.URL.isNotEmpty() && isURLImageOrGif(result.URL))
-            LoadImageTask(view.imageView, context).execute(result.URL)
+        if(result is ImageOrGifThread){
+            if(result.type == ThreadType.IMAGE)
+                LoadImageTask(view.imageView, context).execute(result.URL)
+            else
+                initializeVideoView(result, view)
+        }
 
         return view
     }
 
+    private fun initializeVideoView(thread : ImageOrGifThread, view : View){
+        val uri = Uri.parse(thread.URL)
+        val videoView = view.videoView
+
+        videoView.setVideoURI(uri)
+        videoView.start()
+
+        setVideoViewToLoop(videoView)
+
+        view.imageView.visibility = View.GONE
+        view.videoView.visibility = View.VISIBLE
+    }
+
+    private fun setVideoViewToLoop(videoView : VideoView){
+        videoView.setOnCompletionListener {
+            videoView.start()
+        }
+    }
+
     private fun setValuesForWidgets(view : View, redditThread : RedditThread){
 
-        view.subreddit_name.text = redditThread.Subreddit
+        view.subreddit_name.text = redditThread.subreddit
         view.titleTV.text = redditThread.title
         view.timeTV.text = getFormattedDate(redditThread)
         view.scoreTV.text = redditThread.score.toString()
@@ -46,16 +74,6 @@ class RThreadArrayAdapter(private val context : AppCompatActivity, private val r
             view.postedByExtended.visibility = View.VISIBLE
         }else
             view.postedBy.text = "posted by u/" + redditThread.author
-    }
-
-    private fun isURLImageOrGif(url : String) : Boolean{
-        val URLExtension = url.substring(url.length-4)
-
-        val imgExtensions = ArrayList<String>()
-        imgExtensions.add(".jpg")
-        imgExtensions.add(".png")
-        imgExtensions.add(".gif")
-        return imgExtensions.contains(URLExtension)
     }
 
     override fun getCount(): Int {

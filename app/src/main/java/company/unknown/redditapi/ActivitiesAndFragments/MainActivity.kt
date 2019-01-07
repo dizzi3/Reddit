@@ -1,9 +1,12 @@
 package company.unknown.redditapi.ActivitiesAndFragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import company.unknown.redditapi.DataClasses.ImageOrGifThread
 import company.unknown.redditapi.DataClasses.RedditThread
+import company.unknown.redditapi.DataClasses.SelfThread
 import company.unknown.redditapi.OtherFiles.OnLinkClickedListener
 import company.unknown.redditapi.OtherFiles.OnThreadSelectedListener
 import company.unknown.redditapi.R
@@ -44,22 +47,24 @@ class MainActivity : AppCompatActivity(), OnThreadSelectedListener, OnLinkClicke
 
         //TODO: ADD MORE IFS
 
-        if(selectedThread.is_self)
+        if(selectedThread is SelfThread)
             replaceWithSelfFragment(selectedThread)
+        else if(selectedThread is ImageOrGifThread)
+            replaceWithImageOrGifFragment(selectedThread)
     }
 
-    override fun performLinkClicked(url : String) {
-        val fragment = BrowseWebFragment()
+    private fun replaceWithSelfFragment(thread : RedditThread){
+        val fragment = SelfThreadFragment()
 
         val bundle = Bundle()
-        bundle.putString("url", url)
+        bundle.putSerializable("thread", thread)
         fragment.arguments = bundle
 
         replaceContainerWithFragment(fragment)
     }
 
-    private fun replaceWithSelfFragment(thread : RedditThread){
-        val fragment = SelfThreadFragment()
+    private fun replaceWithImageOrGifFragment(thread : RedditThread){
+        val fragment = ImageOrGifFragment()
 
         val bundle = Bundle()
         bundle.putSerializable("thread", thread)
@@ -80,4 +85,19 @@ class MainActivity : AppCompatActivity(), OnThreadSelectedListener, OnLinkClicke
         fragmentTransaction.replace(R.id.container, fragment)
         fragmentTransaction.commit()
     }
+
+    override fun performLinkClicked(url : String) {
+        val fragment = BrowseWebFragment()
+
+        val bundle = Bundle()
+        bundle.putString("url", url)
+        fragment.arguments = bundle
+
+        replaceContainerWithFragment(fragment)
+    }
+
+    /*
+       TODO:
+       1) WHEN TEXT IS A LINK CHECK FOR /u/example BECAUSE ONLY /r/subreddit IS IMPLEMENTED ATM
+    */
 }

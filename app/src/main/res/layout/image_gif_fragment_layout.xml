@@ -83,7 +83,7 @@
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toTopOf="@+id/commentSectionFrame"
-                app:layout_constraintStart_toEndOf="@+id/imageView6" />
+                app:layout_constraintStart_toEndOf="@+id/imageView6"/>
 
             <TextView
                 android:id="@+id/postedByExtended"
@@ -98,37 +98,30 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/timeTV" />
 
-            <TextView
-                android:id="@+id/self_text"
+            <ImageView
+                android:id="@+id/imageView"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_height="250dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="6dp"
-                android:clickable="true"
-                android:ellipsize="none"
-                android:focusable="true"
-                android:lineSpacingExtra="2dp"
-                android:linksClickable="true"
-                android:textColor="@color/black"
-                android:textSize="16sp"
                 app:layout_constrainedHeight="true"
                 app:layout_constraintBottom_toTopOf="@+id/commentsTV"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/postedByExtended" />
 
-            <FrameLayout
-                android:id="@+id/commentSectionFrame"
+            <VideoView
+                android:id="@+id/videoView"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="6dp"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toTopOf="@+id/commentsTV"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:nestedScrollingEnabled="false">
-
-            </FrameLayout>
+                app:layout_constraintTop_toBottomOf="@+id/postedByExtended"
+                android:visibility="gone"/>
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -149,6 +142,17 @@
                 app:layout_constraintBottom_toTopOf="@+id/commentSectionFrame"
                 app:layout_constraintStart_toEndOf="@+id/scoreTV"
                 app:srcCompat="@drawable/comment_icon" />
+
+            <FrameLayout
+                android:id="@+id/commentSectionFrame"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:nestedScrollingEnabled="false">
+
+            </FrameLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

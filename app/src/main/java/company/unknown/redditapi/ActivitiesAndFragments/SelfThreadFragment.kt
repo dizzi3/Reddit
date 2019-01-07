@@ -1,79 +1,50 @@
 package company.unknown.redditapi.ActivitiesAndFragments
 
-import android.content.Context
-import android.os.Build
 import android.os.Bundle
-import android.text.Html
-import android.text.Spanned
-import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+import android.widget.LinearLayout
 import company.unknown.redditapi.DataClasses.*
 import company.unknown.redditapi.OtherFiles.getFormattedDate
 import company.unknown.redditapi.R
 import kotlinx.android.synthetic.main.self_thread_fragment_layout.view.*
-import android.text.style.URLSpan
-import android.text.SpannableStringBuilder
-import android.widget.TextView
-import android.text.style.ClickableSpan
 import androidx.fragment.app.Fragment
 import company.unknown.redditapi.OtherFiles.HtmlToTextConverter
-import company.unknown.redditapi.OtherFiles.OnLinkClickedListener
-import kotlinx.android.synthetic.main.self_thread_fragment_layout.*
 
 
-class SelfThreadFragment : Fragment(){
+class SelfThreadFragment : BaseThreadFragment(){
 
-    private lateinit var redditThread : RedditThread
+    lateinit var selfThread : SelfThread
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.self_thread_fragment_layout, container, false)
-        redditThread = arguments?.getSerializable("thread") as RedditThread
 
-        initializeWidgets(view)
+        selfThread = arguments?.getSerializable("thread") as SelfThread
+        initializeWidgets(view, selfThread)
+        initializeSelfText(view)
 
         return view
     }
 
-    private fun initializeWidgets(view : View){
-        initializeTextViews(view)
-        switchWidgetsBasedOnLength(view, redditThread)
-        initializeCommentSection()
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        addPaddingIfSelfTextIsEmpty()
     }
 
-    private fun initializeTextViews(view : View){
-        view.subreddit_name.text = redditThread.Subreddit
-        view.titleTV.text = redditThread.title
-        view.timeTV.text = getFormattedDate(redditThread)
-        view.scoreTV.text = redditThread.score.toString()
-        view.commentsTV.text = redditThread.numberOfComments.toString()
-
-        setSelfText(view, redditThread)
+    private fun addPaddingIfSelfTextIsEmpty(){
+        if(view?.self_text?.visibility == View.GONE)
+            view?.commentsTV?.setPadding(0, 20, 0, 0)
     }
 
-    private fun setSelfText(view : View, redditThread: RedditThread){
-        HtmlToTextConverter.setTextView(view.self_text, redditThread.selfTextHtml, context!!)
-    }
+    private fun initializeSelfText(view : View){
 
-    private fun switchWidgetsBasedOnLength(view : View, redditThread : RedditThread){
-        if(redditThread.author.length > 15){
-            view.postedBy.visibility = View.GONE
-            view.postedByExtended.text = "posted by u/" + redditThread.author
-            view.postedByExtended.visibility = View.VISIBLE
-        }else
-            view.postedBy.text = "posted by u/" + redditThread.author
-    }
+        if(selfThread.selfTextHtml.isEmpty() || selfThread.selfTextHtml == "null"){
+            view.self_text.visibility = View.GONE
+            return
+        }
 
-    private fun initializeCommentSection(){
-        val fragmentTransaction = childFragmentManager.beginTransaction()
-
-        val fragment = CommentSectionFragment()
-        val bundle = Bundle()
-        bundle.putString("permalink", redditThread.permalink)
-        fragment.arguments = bundle
-
-        fragmentTransaction.replace(R.id.commentSectionFrame, fragment)
-        fragmentTransaction.commit()
+        HtmlToTextConverter.setTextView(view.self_text!!, selfThread.selfTextHtml, context!!)
     }
 }

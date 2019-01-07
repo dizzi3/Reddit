@@ -34,13 +34,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SelfThreadFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SelfThreadFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/CommentSectionFiles/ExpandableCommentGroup.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/CommentSectionFiles/ExpandableCommentGroup.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/OtherFiles/HtmlToTextConverter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/OtherFiles/HtmlToTextConverter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/DataClasses/RedditThread.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/DataClasses/RedditThread.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/OtherFiles/RThreadArrayAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/OtherFiles/RThreadArrayAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/Tasks/LoadCommentsTask.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/Tasks/LoadCommentsTask.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/comment_section_fragment_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/comment_section_fragment_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/Tasks/SearchRedditTask.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/Tasks/SearchRedditTask.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/self_thread_fragment_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/self_thread_fragment_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_comment_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_comment_layout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/thread_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/thread_list_item.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,11 +71,98 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RThreadArrayAdapter.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/MainActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageOrGifFragment.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/ImageOrGifFragment.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchResultFragment.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SearchResultFragment.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="451">
+              <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchRedditTask.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/Tasks/SearchRedditTask.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RedditThread.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/DataClasses/RedditThread.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchActivity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SearchActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="30" selection-start-column="30" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelfThreadFragment.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SelfThreadFragment.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="image_gif_fragment_layout.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/image_gif_fragment_layout.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="115" column="44" selection-start-line="115" selection-start-column="39" selection-end-line="115" selection-end-column="44" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="thread_list_item.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/thread_list_item.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="103" column="49" selection-start-line="103" selection-start-column="49" selection-end-line="103" selection-end-column="49" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RThreadArrayAdapter.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/OtherFiles/RThreadArrayAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+            <state relative-caret-position="-300">
+              <caret line="36" column="49" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -89,8 +173,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="layoutResourceFile" />
-        <option value="Kotlin File" />
         <option value="layoutResourceFile_vertical" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -99,6 +183,10 @@
       <find>remove</find>
       <find>clear</find>
       <find>layout_constraintHeight_default=&quot;wrap&quot;</find>
+      <find>imageview</find>
+      <find>imag</find>
+      <find>imageView2</find>
+      <find>imageView</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2473,8 +2561,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/LoadImageFromURLTask.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/display_results.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/LoadImageTask.kt" />
@@ -2502,28 +2588,34 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/separator_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/BrowseWebFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/DataClasses/RedditThread.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/Tasks/SearchRedditTask.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/OtherFiles/FormattedDate.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/CommentSectionFiles/Comment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/self_thread_fragment_layout2.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/comment_section_fragment_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/CommentSectionFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SearchActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/OtherFiles/RThreadArrayAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/CommentSectionFiles/ExpandableCommentGroup.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/Tasks/LoadCommentsTask.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/thread_list_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/single_comment_layout.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/self_thread_fragment_layout.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/MainActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SelfThreadFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/OtherFiles/HtmlToTextConverter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/DataClasses/SelfThread.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/DataClasses/ImageThread.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/DataClasses/RedditThread.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/self_thread_fragment_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SearchActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/BaseThreadFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SelfThreadFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/DataClasses/ImageOrGifThread.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/Tasks/SearchRedditTask.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/ImageOrGifFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/OtherFiles/RThreadArrayAdapter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/thread_list_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/image_gif_fragment_layout.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="width" value="1940" />
     <option name="height" value="1050" />
@@ -2534,8 +2626,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -2615,6 +2705,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2627,9 +2719,9 @@
     <property name="settings.editor.splitter.proportion" value="0.2304038" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Programowanie\AndroidStudio\Projects\RedditAPI\app\src\main\res\drawable" />
-      <recent name="C:\Programowanie\AndroidStudio\Projects\RedditAPI\app\src\main\res\layout" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Programowanie\AndroidStudio\Projects\RedditAPI\app\src\main\res\layout\ActivityOrFragemntLayouts" />
+      <recent name="C:\Programowanie\AndroidStudio\Projects\RedditAPI\app\src\main\java\company\unknown\redditapi\OtherFiles" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="company.unknown.redditapi" />
@@ -2640,9 +2732,9 @@
       <recent name="company.unknown.redditapi.DataClasses" />
       <recent name="company.unknown.redditapi.Tasks" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Programowanie\AndroidStudio\Projects\RedditAPI\app\src\main\res\layout\ActivityOrFragemntLayouts" />
-      <recent name="C:\Programowanie\AndroidStudio\Projects\RedditAPI\app\src\main\java\company\unknown\redditapi\OtherFiles" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Programowanie\AndroidStudio\Projects\RedditAPI\app\src\main\res\layout" />
+      <recent name="C:\Programowanie\AndroidStudio\Projects\RedditAPI\app\src\main\res\drawable" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2810,31 +2902,32 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" weight="0.3298969" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" weight="0.3298969" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32842416" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="7" />
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50201344" side_tool="true" weight="0.32842416" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3298969" />
+      <window_info active="true" anchor="right" id="Preview" order="8" visible="true" weight="0.3295302" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.8232695" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3298969" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32842416" />
       <window_info anchor="bottom" id="Logcat" order="8" sideWeight="0.49798658" weight="0.44035345" />
       <window_info id="Captures" order="5" weight="0.25" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19597316" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19597316" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.32842416" />
       <window_info anchor="right" id="Gradle" order="5" weight="0.3295302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Preview" order="8" weight="0.3295302" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -2842,6 +2935,38 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3460972" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Build" order="10" weight="0.32842416" />
+      <window_info id="Designer" order="4" />
+      <window_info id="Build Variants" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.8232695" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" weight="0.3298969" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Captures" order="5" weight="0.25" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50201344" side_tool="true" weight="0.32842416" />
+      <window_info anchor="right" id="Preview" order="8" weight="0.3295302" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Logcat" order="8" sideWeight="0.49798658" weight="0.44035345" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3298969" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32842416" />
+      <window_info anchor="right" id="Gradle" order="5" weight="0.3295302" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19597316" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32842416" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3460972" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -2852,49 +2977,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SearchActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/Tasks/SearchRedditTask.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="68" column="12" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_layout.xml">
-      <provider editor-type-id="text-editor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SearchActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/Tasks/SearchRedditTask.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1175">
@@ -2966,13 +3048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/Tasks/LoadImageTask.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="85" lean-forward="true" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/jk.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/DeleteFragment.kt" />
     <entry file="file://$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/constraint/R.java">
@@ -3014,26 +3089,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_layout.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/separator_view.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -3052,43 +3107,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/Tasks/SearchRedditTask.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="77" column="62" selection-start-line="77" selection-start-column="62" selection-end-line="77" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_result_fragment_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/thread_list_item2.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/thread_list_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2640">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/comment_section_fragment_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -3106,16 +3134,6 @@
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/self_thread_fragment_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1720">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
@@ -3140,41 +3158,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SearchActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-449">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SearchResultFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SelfThreadFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="791">
-          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/CommentSectionFiles/Comment.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="75" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
-          <folding>
-            <element signature="e#55#125#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3185,13 +3172,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/DataClasses/RedditThread.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/OtherFiles/HtmlToTextConverter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-569">
@@ -3199,11 +3179,149 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_result_fragment_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/Tasks/LoadImageTask.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="10" column="85" lean-forward="true" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/self_thread_fragment_layout.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="106" column="46" selection-start-line="106" selection-start-column="46" selection-end-line="106" selection-end-column="46" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/DataClasses/ImageThread.kt" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/DataClasses/SelfThread.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="90" lean-forward="true" selection-start-line="5" selection-start-column="90" selection-end-line="5" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/DataClasses/ImageOrGifThread.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SelfThreadFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SearchActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/Tasks/SearchRedditTask.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/BaseThreadFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/SearchResultFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/ImageOrGifFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/ActivitiesAndFragments/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/OtherFiles/RThreadArrayAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        <state relative-caret-position="-300">
+          <caret line="36" column="49" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/company/unknown/redditapi/DataClasses/RedditThread.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_layout.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/thread_list_item.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="103" column="49" selection-start-line="103" selection-start-column="49" selection-end-line="103" selection-end-column="49" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/image_gif_fragment_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="115" column="44" selection-start-line="115" selection-start-column="39" selection-end-line="115" selection-end-column="44" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
   </component>
