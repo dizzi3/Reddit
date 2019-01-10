@@ -16,6 +16,11 @@ open class BaseThreadFragment : Fragment(){
         initializeCommentSection(thread)
     }
 
+    protected fun initializeWidgetsWithoutSwitchingPostedBy(view : View, thread : RedditThread){
+        initializeTextViews(view, thread)
+        initializeCommentSection(thread)
+    }
+
     private fun initializeTextViews(view : View, redditThread: RedditThread){
         view.subreddit_name.text = redditThread.subreddit
         view.titleTV.text = redditThread.title

@@ -1,10 +1,10 @@
 package company.unknown.redditapi.ActivitiesAndFragments
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import company.unknown.redditapi.DataClasses.ImageOrGifThread
+import company.unknown.redditapi.DataClasses.LinkThread
 import company.unknown.redditapi.DataClasses.RedditThread
 import company.unknown.redditapi.DataClasses.SelfThread
 import company.unknown.redditapi.OtherFiles.OnLinkClickedListener
@@ -51,6 +51,18 @@ class MainActivity : AppCompatActivity(), OnThreadSelectedListener, OnLinkClicke
             replaceWithSelfFragment(selectedThread)
         else if(selectedThread is ImageOrGifThread)
             replaceWithImageOrGifFragment(selectedThread)
+        else if(selectedThread is LinkThread)
+            replaceWithLinkFragment(selectedThread)
+    }
+
+    private fun replaceWithLinkFragment(thread : RedditThread){
+        val fragment = LinkThreadFragment()
+
+        val bundle = Bundle()
+        bundle.putSerializable("thread", thread)
+        fragment.arguments = bundle
+
+        replaceContainerWithFragment(fragment)
     }
 
     private fun replaceWithSelfFragment(thread : RedditThread){
@@ -75,14 +87,14 @@ class MainActivity : AppCompatActivity(), OnThreadSelectedListener, OnLinkClicke
 
     private fun replaceContainerWithFragment(fragment : Fragment){
         val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.container, fragment)
+        fragmentTransaction.replace(R.id.commentSectionFrame, fragment)
         fragmentTransaction.addToBackStack(null)
         fragmentTransaction.commit()
     }
 
     private fun addFragmentToAContainer(fragment : Fragment){
         val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.container, fragment)
+        fragmentTransaction.replace(R.id.commentSectionFrame, fragment)
         fragmentTransaction.commit()
     }
 

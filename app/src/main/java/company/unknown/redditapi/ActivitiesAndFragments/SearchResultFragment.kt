@@ -23,8 +23,14 @@ class SearchResultFragment : Fragment(){
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        initialize()
+    }
+
+    private fun initialize(){
         initializeThreads()
         initializeListView()
+
+        subredditTV.text = redditThreads[0].subreddit
     }
 
     private fun initializeThreads(){

@@ -1,7 +1,6 @@
 package company.unknown.redditapi.CommentSectionFiles
 
 import android.text.method.LinkMovementMethod
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import com.xwray.groupie.ExpandableGroup
@@ -28,7 +27,7 @@ class ExpandableCommentGroup constructor(comment : Comment, depth: Int = 0)
 
         private fun setUpViews(viewHolder : ViewHolder){
             viewHolder.itemView.authorTV.text = comment.author
-            viewHolder.itemView.dateTV.text = comment.date
+            viewHolder.itemView.timeTV.text = comment.date
             viewHolder.itemView.commentBodyTV.text = HtmlToTextConverter.noTrailingWhiteLines(comment.body)
             viewHolder.itemView.upvotesTV.text = comment.upvotes
         }

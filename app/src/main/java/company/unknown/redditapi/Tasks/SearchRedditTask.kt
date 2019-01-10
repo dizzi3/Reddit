@@ -4,10 +4,7 @@ import android.os.AsyncTask
 import android.util.Log
 import company.unknown.redditapi.ActivitiesAndFragments.SearchActivity
 import company.unknown.redditapi.CommentSectionFiles.Comment
-import company.unknown.redditapi.DataClasses.ImageOrGifThread
-import company.unknown.redditapi.DataClasses.RedditThread
-import company.unknown.redditapi.DataClasses.SelfThread
-import company.unknown.redditapi.DataClasses.ThreadType
+import company.unknown.redditapi.DataClasses.*
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -93,6 +90,11 @@ class SearchRedditTask(private val context : SearchActivity)
                 val url = data.getString("url")
                 return ImageOrGifThread(subreddit, title, url, author, score, createdUtc,
                         numberOfComments, permalink, ThreadType.IMAGE)
+            }else if(hint == "link"){
+                val url = data.getString("url")
+                val thumbnailURL = data.getString("thumbnail")
+                return LinkThread(subreddit, title, url, author, score, createdUtc,
+                        numberOfComments, permalink, thumbnailURL)
             }
         }catch (e : Exception){}
 

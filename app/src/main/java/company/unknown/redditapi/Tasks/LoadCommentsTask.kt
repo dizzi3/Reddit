@@ -55,7 +55,9 @@ class LoadCommentsTask(private val fragment : CommentSectionFragment, private va
 
             for(index in 0 until commentsArrayJSON.length()){
                 val commentJSON = commentsArrayJSON.getJSONObject(index).getJSONObject("data")
-                comments.add(getSingleCommentFromJSONObject(commentJSON, generateCommentFromJSONData(commentJSON)))
+                try {
+                    comments.add(getSingleCommentFromJSONObject(commentJSON, generateCommentFromJSONData(commentJSON)))
+                }catch (e : Exception){}
             }
 
             return comments
@@ -72,7 +74,9 @@ class LoadCommentsTask(private val fragment : CommentSectionFragment, private va
                         .getJSONArray("children")
                 for (index in 0 until childrenArray.length()) {
                     val commentJSON = childrenArray.getJSONObject(index).getJSONObject("data")
-                    comment.childs.add(getSingleCommentFromJSONObject(commentJSON, generateCommentFromJSONData(commentJSON)))
+                    try{
+                        comment.childs.add(getSingleCommentFromJSONObject(commentJSON, generateCommentFromJSONData(commentJSON)))
+                    }catch (e : Exception){}
                 }
                 return comment
             }
@@ -82,7 +86,6 @@ class LoadCommentsTask(private val fragment : CommentSectionFragment, private va
 
     private fun generateCommentFromJSONData(data : JSONObject) : Comment{
         val author = data.getString("author")
-
         val body = HtmlToTextConverter.getSpannableStringBuilder(
                 data.getString("body_html"), context)
         val score = data.getString("score")
